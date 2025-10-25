@@ -1,0 +1,108 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Container Styling for the Box */
+.container {
+    width: 90%;
+    max-width: 480px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    border: 2px solid #ddd;  /* Adding a border to create a box */
+    transition: all 0.3s ease;
+}
+
+/* Container Hover Effect */
+.container:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #4a90e2;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Input Fields */
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+/* Input Focus Effect */
+input[type="text"]:focus {
+    border-color: #4a90e2;
+    outline: none;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+/* Button Styling */
+button {
+    margin-top: 30px;
+    padding: 12px 20px;
+    border: none;
+    background-color: #4a90e2;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #0078d4;
+    transform: translateY(-2px);
+}
+
+/* Button Focus Effect */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.6);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        width: 100%;
+    }
+}

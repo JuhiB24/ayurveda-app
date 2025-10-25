@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body
+{
+background-color:silver;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: url('image.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: animateBg 5s linear infinite;
+}
+
+@keyframes animateBg{
+    100%{
+        filter: hue-rotate(350deg);
+    }
+}
+
+.login-box{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(7.34234px);
+}
+h2{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    width: 310px;
+    margin: 30px 0;
+    border-bottom: 2px solid #fff;
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #fff;
+    pointer-events: none;
+    transition: .34s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: 4.7894343px;
+}
+.input-box input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 36.653px 0 5px;
+}
+.input-box .icon{
+    position: absolute;
+    right: 18px;
+    color: #13e0f3;
+    font-size: 1.2em;
+    line-height: 57px;
+}
+.remember-forgot{
+    margin: -15px 0 15px;
+    font-size: .9324em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+.remember-forgot label input{
+    margin-right: 3.234px;
+}
+.remember-forgot a{
+    color: #f9f9f9;
+    text-decoration: none;
+}
+.remember-forgot a:hover{
+    color: aqua;
+    text-decoration: underline;
+}
+
+button{
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1.123em;
+    color: #000;
+    font-weight: 500;
+}
+
+.register-link{
+    color: #f9f9f9;
+    font-size: .9123em;
+    text-align: center;
+    margin: 25px 0 10px;
+
+}
+.register-link p a{
+    color: #f9f9f9;
+    text-decoration: none;
+    font-weight: 600;
+}
+.register-link p a:hover{
+    color: aqua;
+    text-decoration: underline;
+}
+
+@media(max-width: 360px){
+    .login-box{
+        width: 100%;
+        height: 100vh;
+        border: none;
+        border-radius: 0px;
+    }
+    .input-box{
+        width: 290px;
+
+    }
+}

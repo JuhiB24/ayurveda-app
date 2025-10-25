@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA_Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='hp.css') }}">
+</head>
+<body>
+    <h1>Welcome to the Ayurvedic Treatment Prediction System</h1>
+    <form action="/predict" method="POST">
+        <label for="symptoms">Enter Symptoms (comma separated):</label>
+        <input type="text" id="symptoms" name="symptoms" required>
+        <button type="submit">Get Treatment</button>
+    </form>
+
+    {% if prediction %}
+        <h3>Prediction Results:</h3>
+        <ul>
+            {% for item in prediction %}
+                <li><strong>Disease:</strong> {{ item['Disease'] }} <br><strong>Treatment:</strong> {{ item['Ayurvedic Treatment'] }} <br><strong>Matched Symptoms:</strong> {{ item['Matched Symptoms'] }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
